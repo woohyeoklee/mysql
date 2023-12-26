@@ -3,7 +3,6 @@ package com.example.fastcampusmysql.domain.member.entity;
 import lombok.Builder;
 import lombok.Getter;
 
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Objects;
 
