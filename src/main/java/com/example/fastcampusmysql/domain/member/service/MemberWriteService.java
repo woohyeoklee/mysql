@@ -26,4 +26,11 @@ public class MemberWriteService {
         return memberRepository.save(member);
     }
 
+    public void changeNickname(Long id, String nickname) {
+        var member = memberRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("해당하는 회원이 없습니다."));
+        member.changeNickname(nickname);
+        memberRepository.save(member);
+    }
+
 }

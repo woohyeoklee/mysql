@@ -63,7 +63,9 @@ public class MemberRepository {
     }
 
     private Member update(Member member) {
-        //TODO update
+        var sql = "update " + TABLE_NAME + " set nickname = :nickname where id = :id";
+        SqlParameterSource params = new BeanPropertySqlParameterSource(member);
+        namedParameterJdbc.update(sql, params);
         return member;
     }
 }
