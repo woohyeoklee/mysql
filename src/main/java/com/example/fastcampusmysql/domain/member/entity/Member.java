@@ -5,7 +5,6 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 import java.util.Objects;
-import java.util.Optional;
 
 @Getter
 public class Member {
